@@ -9,50 +9,51 @@ game_over = False
 
 
 def get_game_over():
-    over = False
+    global game_over
     if (btn1['text'] == btn2['text'] == btn3['text']) and btn2['text'] != '':
         btn1['fg'] = 'red'
         btn2['fg'] = 'red'
         btn3['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn4['text'] == btn5['text'] == btn6['text']) and btn5['text'] != '':
         btn4['fg'] = 'red'
         btn5['fg'] = 'red'
         btn6['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn7['text'] == btn8['text'] == btn9['text']) and btn8['text'] != '':
         btn7['fg'] = 'red'
         btn8['fg'] = 'red'
         btn9['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn1['text'] == btn5['text'] == btn9['text']) and btn5['text'] != '':
         btn1['fg'] = 'red'
         btn5['fg'] = 'red'
         btn9['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn7['text'] == btn5['text'] == btn3['text']) and btn5['text'] != '':
         btn7['fg'] = 'red'
         btn3['fg'] = 'red'
         btn5['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn1['text'] == btn4['text'] == btn7['text']) and btn7['text'] != '':
         btn1['fg'] = 'red'
         btn4['fg'] = 'red'
         btn7['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn2['text'] == btn5['text'] == btn8['text']) and btn5['text'] != '':
         btn2['fg'] = 'red'
         btn5['fg'] = 'red'
         btn8['fg'] = 'red'
-        over = True
+        game_over = True
     if (btn3['text'] == btn6['text'] == btn9['text']) and btn9['text'] != '':
         btn3['fg'] = 'red'
         btn6['fg'] = 'red'
         btn9['fg'] = 'red'
-        over = True
+        game_over = True
     if btn1['text'] != '' and btn2['text'] != '' and btn3['text'] != '' and btn4['text'] != '' and btn5['text'] != '' and btn6['text'] != '' and btn7['text'] != '' and btn8['text'] != '' and btn9['text'] != '':
-        over=True
-        return over
+        game_over=True
+    print(game_over)
+    return game_over
 
 
 def get_move_ai():
